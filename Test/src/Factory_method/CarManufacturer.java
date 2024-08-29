@@ -3,7 +3,7 @@ package Factory_method;
 public class CarManufacturer {
     private final Factory factory;
 
-    public CarManufacturer(Factory factory) {
+    public CarManufacturer (Factory factory) {
         this.factory = factory;
     }
 
