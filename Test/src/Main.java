@@ -1,9 +1,11 @@
-import Factory_method.BodyTypes;
-import Factory_method.Car;
-import Factory_method.CarManufacturer;
+import Factory_method.*;
 
 public class Main {
     public static void main(String[] args) {
+        CarManufacturer audi = new AudiManufacturer();
+        audi.produce(BodyTypes.HATCHBACK);
 
+        CarManufacturer vag = new VAGManufacturer();
+        vag.produce(BodyTypes.HATCHBACK);
     }
 }

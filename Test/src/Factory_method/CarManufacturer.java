@@ -1,16 +1,11 @@
 package Factory_method;
 
-public class CarManufacturer {
-    private final Factory factory;
-
-    public CarManufacturer (Factory factory) {
-        this.factory = factory;
-    }
+public abstract class CarManufacturer {
 
     public Car produce (BodyTypes bodyTypes){
-        Car car = factory.createCar(bodyTypes);
-        car.create();
-        System.out.println("Your car created");
+        Car car = createCar(bodyTypes);
+        car.create(car);
         return car;
     }
+    public abstract Car createCar (BodyTypes bodyTypes);
 }

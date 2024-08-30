@@ -1,14 +1,20 @@
 package Factory_method;
 
-public abstract class Car {
-
+public class VAGHatchback extends Car {
     private BodyTypes bodyType;
     private String model;
     private long modelYear;
 
+    public VAGHatchback (BodyTypes bodyType, String model, long modelYear) {
+        this.bodyType = bodyType;
+        this.model = model;
+        this.modelYear = modelYear;
+    }
 
-    public abstract void create(Car car);
-
+    @Override
+    public void create(Car car){
+        System.out.println("Your car created"+car);
+    }
     @Override
     public String toString (){
         return  '\n' +"Тип кузова - " + bodyType + '\n' +
