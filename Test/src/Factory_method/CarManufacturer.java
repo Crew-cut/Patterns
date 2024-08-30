@@ -1,7 +1,6 @@
 package Factory_method;
 
 public abstract class CarManufacturer {
-
     public Car produce (BodyTypes bodyTypes){
         Car car = createCar(bodyTypes);
         car.create(car);
